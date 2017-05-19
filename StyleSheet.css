@@ -1,1 +1,10 @@
 
+.navBar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.navBar li a {
+    display: block;
+    width: 60px;
+}
