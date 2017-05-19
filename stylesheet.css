@@ -11,7 +11,7 @@ ul   {
   }
 li   {
   display: inline; 
-  width: 60px; 
+  width: 300px; 
   color:white; 
   boarder-right: 1px solid #bbb;
  }
