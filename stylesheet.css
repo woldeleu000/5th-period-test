@@ -1,0 +1,17 @@
+Body {
+  background: Black;
+  }
+h1   {
+  color: White;
+  }
+ul   { 
+  list-style-type: none; 
+  margin: 0; 
+  padding: 0;
+  }
+li   {
+  display: inline; 
+  width: 60px; 
+  color:white; 
+  boarder-right: 1px solid #bbb;
+ }
