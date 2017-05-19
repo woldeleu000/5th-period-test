@@ -9,9 +9,4 @@ ul   {
   margin: 0; 
   padding: 0;
   }
-li   {
-  display: inline; 
-  width: 300 px; 
-  color:white; 
-  boarder-right: 10 px solid #bbb;
- }
+
