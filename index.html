@@ -1,21 +1,19 @@
 <html>
   <head>	
     <link type="text/css" rel="stylesheet" href="stylesheet.css"/> 
-    <script>
-      body { background: black; }
-      .navBar ul li { list-syle-type: none; margin: 0; padding: 0; overflow: hidden; background-color: #333; }
-      
-    </script>  
+    <script src="myscript.js"></script>
  </head>
   <title>My test website</title>
-  <body>
-    <h1>This Week's News</h1>
+   <body>
+    <h1 id="header">This Week's News</h1>
     <div class="navBar">
       <ul>
-        <li>Home</li>
-        <li>latest</li>
-        <li>Trending</li>
-        <li>Likes</li>
+      <li><a class="active" href="#Home">Home</a></li>
+      <li><a class="active" href="#latest">Latest</a></li>
+      <li><a class="active" href="#trending">Trending</a></li>
+      <li><a class="active" href="#likes">Likes</a></li>
+      <li style="float:center"><a class="search" href="#search">Search </a></li>
+      <li style="float:right"><a class="active" href="#about">About</a></li>
       </ul>
     </div>
     
