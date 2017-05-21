@@ -2,6 +2,21 @@
   <head>	
     <link type="text/css" rel="stylesheet" href="stylesheet.css"/> 
     <script src="myscript.js"></script>
+    <style> 
+input[type=text] {
+    width: 130px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('searchicon.png');
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
  </head>
   <title>My test website</title>
    <body>
@@ -12,7 +27,8 @@
       <li><a class="active" href="#latest">Latest</a></li>
       <li><a class="active" href="#trending">Trending</a></li>
       <li><a class="active" href="#likes">Likes</a></li>
-      <li style="float:center"><a class="search" href="#search">Search </a></li>
+      <li style="float:center"><a class="search" href="#search"><form><input type="text" name="search" placeholder="Search..">
+</form> </a></li>
       <li style="float:right"><a class="active" href="#about">About</a></li>
       </ul>
     </div>
