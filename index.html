@@ -5,19 +5,15 @@
   
    <title>My test website</title>
   <body>
-    <h1 id="header">Class of 2017</h1>
-    <div class="navBar">
-      <ul>
-      <li><a class="active" href="#https://woldeleu000.github.io/5th-period-test/graduation">Graduation</a></li>
-      <li><a class="active" href="https://woldeleu000.github.io/5th-period-test/School-days">School Days left</a></li>
-      <li><a class="active" href="https://woldeleu000.github.io/5th-period-test/Calendar-days">Calendar Days left</a></li>
+    <h1 id="header">LHS's Class of 2017 Graduation</h1>
+    
+     <div class="school"; inline-float:left;  >
+       <img src="https://goo.gl/65xfxy" alt="school photo"/>
+     </div>
+      <p id="days">
       
-      </ul>
-      
-      <p>
-      I was really bored so I made this site, enjoy!
       </p>
-      <p id="demo">
+      <p id="sDays">
       
       </p>
       <script>
@@ -35,9 +31,27 @@
 
     var min = Math.floor(leftSec/(60));
     var leftSec = leftSec - min * 60;
-document.getElementById("demo").innerHTML = "You have " + days + " days " + hrs + " hours " + min + " minutes and " + leftSec + " seconds before Graduation.";
+document.getElementById("days").innerHTML = "You have " + days + " days " + hrs + " hours " + min + " minutes and " + leftSec + " seconds before Graduation.";
 </script>
-    </div>
+
+<script>
+      var date1 = new Date();
+      var date2 = new Date("2017/06/09 00:00:00")
+      
+      var diff = (date2 - date1)/1000 ;
+    var diff = Math.abs(Math.floor(diff));
+
+    var days = Math.floor(diff/(24*60*60));
+    var leftSec = diff - days * 24*60*60;
+
+    var hrs = Math.floor(leftSec/(60*60));
+    var leftSec = leftSec - hrs * 60*60;
+
+    var min = Math.floor(leftSec/(60));
+    var leftSec = leftSec - min * 60;
+document.getElementById("sDays").innerHTML = "You have " + days + " School days " + hrs + " hours " + min + " minutes and " + leftSec + " seconds before Graduation.";
+</script>
+    
     
   </body>
 </html>
