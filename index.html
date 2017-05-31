@@ -5,53 +5,75 @@
   
    <title>My test website</title>
   <body>
-    <h1 id="header">LHS's Class of 2017 Graduation</h1>
-    
-     <div class="school"; >
-       <img src="https://goo.gl/65xfxy" alt="school photo"/>
-     </div>
-      <p id="days">
-      
-      </p>
-      <p id="sDays">
-      
-      </p>
-      <script>
-      var date1 = new Date();
-      var date2 = new Date("2017/06/19 18:00:00")
-      
-      var diff = (date2 - date1)/1000;
+  <h1 id="header">LHS's Class of 2017 Graduation</h1>
+
+  <div class="school" ;>
+   <p>
+    <img src="https://goo.gl/65xfxy" alt="school photo" />
+    </p>
+  </div>
+  
+  <div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'London')">London</button>
+  <button class="tablinks" onclick="openCity(event, 'Paris')">Paris</button>
+  <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
+</div>
+
+<div id="London" class="tabcontent">
+  <h3>London</h3>
+  <p>London is the capital city of England.</p>
+</div>
+
+<div id="Paris" class="tabcontent">
+  <h3>Paris</h3>
+  <p>Paris is the capital of France.</p> 
+</div>
+
+<div id="Tokyo" class="tabcontent">
+  <h3>Tokyo</h3>
+  <p>Tokyo is the capital of Japan.</p>
+</div>
+  
+  
+  
+  <p id="days">
+
+  </p>
+  <p id="sDays">
+
+  </p>
+  <script>
+    var date1 = new Date();
+    var date2 = new Date("2017/06/19 18:00:00")
+
+    var diff = (date2 - date1) / 1000;
     var diff = Math.abs(Math.floor(diff));
-
-    var days = Math.floor(diff/(24*60*60));
-    var leftSec = diff - days * 24*60*60;
-
-    var hrs = Math.floor(leftSec/(60*60));
-    var leftSec = leftSec - hrs * 60*60;
-
-    var min = Math.floor(leftSec/(60));
+    var days = Math.floor(diff / (24 * 60 * 60));
+    var leftSec = diff - days * 24 * 60 * 60;
+    var hrs = Math.floor(leftSec / (60 * 60));
+    var leftSec = leftSec - hrs * 60 * 60;
+    var min = Math.floor(leftSec / (60));
     var leftSec = leftSec - min * 60;
-document.getElementById("days").innerHTML = "You have " + days + " days " + hrs + " hours " + min + " minutes and " + leftSec + " seconds before Graduation.";
-</script>
+    document.getElementById("days").innerHTML = "You have " + days + " days " + hrs + " hours " + min + " minutes and " + leftSec + " seconds before Graduation.";
 
-<script>
-      var date1 = new Date();
-      var date2 = new Date("2017/06/13 18:00:00")
-      
-      var diff = (date2 - date1)/1000 ;
+  </script>
+
+  <script>
+    var date1 = new Date();
+    var date2 = new Date("2017/06/13 18:00:00")
+
+    var diff = (date2 - date1) / 1000;
     var diff = Math.abs(Math.floor(diff));
-
-    var days = Math.floor(diff/(24*60*60));
-    var leftSec = diff - days * 24*60*60;
-
-    var hrs = Math.floor(leftSec/(60*60));
-    var leftSec = leftSec - hrs * 60*60;
-
-    var min = Math.floor(leftSec/(60));
+    var days = Math.floor(diff / (24 * 60 * 60));
+    var leftSec = diff - days * 24 * 60 * 60;
+    var hrs = Math.floor(leftSec / (60 * 60));
+    var leftSec = leftSec - hrs * 60 * 60;
+    var min = Math.floor(leftSec / (60));
     var leftSec = leftSec - min * 60;
-document.getElementById("sDays").innerHTML = "You have " + days + " School days " + hrs + " hours " + min + " minutes and " + leftSec + " seconds before Graduation.";
-</script>
-    
-    
-  </body>
+    document.getElementById("sDays").innerHTML = "You have " + days + " School days " + hrs + " hours " + min + " minutes and " + leftSec + " seconds before Graduation.";
+
+  </script>
+
+
+</body>
 </html>
