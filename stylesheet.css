@@ -7,7 +7,7 @@
 
 body {
   background-image: url("https://goo.gl/GwLcbc");
-  align: center;
+  
 }
 
 p {
@@ -33,6 +33,7 @@ div.tab button {
     cursor: pointer;
     padding: 14px 16px;
     transition: 0.3s;
+    font-size: 17px;
 }
 
 /* Change background color of buttons on hover */
