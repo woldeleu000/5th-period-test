@@ -16,22 +16,38 @@
   </div>
   
   <div class="tab">
-  <button class="tablinks" onclick="openCity(event, 'schoolDays')">School Days</button>
-  <button class="tablinks" onclick="openCity(event, 'calendarDays')">Calendar Days</button>
+  <button class="tablinks" onclick="openCity(event, 'days')">Calendarn Days</button>
+  <button class="tablinks" onclick="openCity(event, 'sDays')">School Days</button>
 </div>
 
-<div id="schoolDays" class="tabcontent">
-  <p id="sDays"></p>
+<div id="days" class="tabcontent">
+  <h3>Calendar Days</h3>
+  <p id=Cal-Day></p>
 </div>
 
-<div id="calendarDays" class="tabcontent">
-  <p id="days"></p> 
+<div id="sDays" class="tabcontent">
+  <h3>Paris</h3>
+  <p id=Sch-Day></p> 
 </div>
-    
- <script>
+
+<script>
+function openCity(evt, typeOfDays) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(typeOfDays).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+</script>
+<script>
     var date1 = new Date();
     var date2 = new Date("2017/06/19 18:00:00")
-
     var diff = (date2 - date1) / 1000;
     var diff = Math.abs(Math.floor(diff));
     var days = Math.floor(diff / (24 * 60 * 60));
@@ -41,13 +57,11 @@
     var min = Math.floor(leftSec / (60));
     var leftSec = leftSec - min * 60;
     document.getElementById("days").innerHTML = "You have " + days + " days " + hrs + " hours " + min + " minutes and " + leftSec + " seconds before Graduation.";
-
   </script>
 
   <script>
     var date1 = new Date();
     var date2 = new Date("2017/06/13 18:00:00")
-
     var diff = (date2 - date1) / 1000;
     var diff = Math.abs(Math.floor(diff));
     var days = Math.floor(diff / (24 * 60 * 60));
@@ -57,7 +71,6 @@
     var min = Math.floor(leftSec / (60));
     var leftSec = leftSec - min * 60;
     document.getElementById("sDays").innerHTML = "You have " + days + " School days " + hrs + " hours " + min + " minutes and " + leftSec + " seconds before Graduation.";
-
   </script>
 
 
